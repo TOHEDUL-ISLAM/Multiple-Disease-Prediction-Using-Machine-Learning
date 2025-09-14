@@ -1,70 +1,80 @@
-🩺 Disease Predictor - A Machine Learning Web App
+# 🩺 Disease Predictor - A Machine Learning Web App
+
 This is a web application that predicts the likelihood of having Diabetes or Anemia based on user-input health data. The project uses machine learning models to make predictions and a Flask-based backend to serve the user interface.
 
-✨ Features
-Dual Disease Prediction: Predicts the probability of two different health conditions:
+## ✨ Features
 
-Diabetes
+  * **Dual Disease Prediction**: Predicts the probability of two different health conditions:
+      * Diabetes
+      * Anemia
+  * **User-Friendly Web Interface**: Simple and intuitive HTML forms for data input.
+  * **Real-Time Predictions**: Instantly get a prediction after submitting the required health parameters.
+  * **Powered by Scikit-learn**: Utilizes robust machine learning models trained for classification tasks.
 
-Anemia
+-----
 
-User-Friendly Web Interface: Simple and intuitive HTML forms for data input.
+## 🛠️ Technologies & Libraries Used
 
-Real-Time Predictions: Instantly get a prediction after submitting the required health parameters.
-
-Powered by Scikit-learn: Utilizes robust machine learning models trained for classification tasks.
-
-🛠️ Technologies & Libraries Used
 The project is built using the following technologies:
 
-Backend: Python, Flask
+  * **Backend**: Python, Flask
+  * **Frontend**: HTML, CSS
+  * **Machine Learning**: Scikit-learn, Pandas, NumPy
+  * **Development Environment**: Jupyter Notebook
 
-Frontend: HTML, CSS
+-----
 
-Machine Learning: Scikit-learn, Pandas, NumPy
+## 🚀 Setup and Installation
 
-Development Environment: Jupyter Notebook
-
-🚀 Setup and Installation
 To run this project on your local machine, please follow these steps.
 
-Prerequisites
-Python 3.7+
+### Prerequisites
 
-pip (Python package installer)
+  * Python 3.7+
+  * pip (Python package installer)
 
-Installation Steps
-Clone the repository:
+### Installation Steps
 
-Bash
+1.  **Clone the repository:**
 
-git clone https://github.com/your-username/disease-predictor.git
-Navigate into the project directory:
+    ```bash
+    git clone https://github.com/your-username/disease-predictor.git
+    ```
 
-Bash
+2.  **Navigate into the project directory:**
 
-cd disease-predictor
-Create and activate a virtual environment (recommended):
+    ```bash
+    cd disease-predictor
+    ```
 
-Bash
+3.  **Create and activate a virtual environment (recommended):**
 
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required dependencies:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-Bash
+4.  **Install the required dependencies:**
 
-pip install Flask pandas scikit-learn
-Run the Flask application:
+    ```bash
+    pip install Flask pandas scikit-learn
+    ```
 
-Bash
+5.  **Run the Flask application:**
 
-python app.py
-Open your web browser and navigate to http://127.0.0.1:5000/ to use the application.
+    ```bash
+    python app.py
+    ```
 
-📂 File Structure
+6.  Open your web browser and navigate to `http://127.0.0.1:5000/` to use the application.
+
+-----
+
+## 📂 File Structure
+
 The project directory is organized as follows:
 
+```
 /disease-predictor
 |
 |-- templates/
@@ -80,11 +90,21 @@ The project directory is organized as follows:
 |-- knn_model.pkl               # Trained KNN model for Anemia prediction
 |-- scaling.pkl                 # Saved scaler for data preprocessing
 |-- ... (other static files like CSS, images)
-🤖 Machine Learning Models
+```
+
+-----
+
+## 🤖 Machine Learning Models
+
 This application uses two distinct machine learning models for its predictions:
 
-Diabetes Prediction: A Support Vector Machine (SVM) model (svm_model.pkl) is used to classify whether a person has diabetes based on metrics like glucose level, blood pressure, BMI, etc.
+1.  **Diabetes Prediction**: A **Support Vector Machine (SVM)** model (`svm_model.pkl`) is used to classify whether a person has diabetes based on metrics like glucose level, blood pressure, BMI, etc.
+2.  **Anemia Prediction**: A **K-Nearest Neighbors (KNN)** model (`knn_model.pkl`) is used to determine the likelihood of anemia based on blood sample data such as Gender, Hemoglobin, MCH, MCV, and MCHC.
 
-Anemia Prediction: A K-Nearest Neighbors (KNN) model (knn_model.pkl) is used to determine the likelihood of anemia based on blood sample data such as Gender, Hemoglobin, MCH, MCV, and MCHC.
+The complete model training and data exploration process can be found in the `Multiple_Disease_Prediction.ipynb` Jupyter Notebook.
 
-The complete model training and data exploration process can be found in the Multiple_Disease_Prediction.ipynb Jupyter Notebook.
+-----
+
+## 📝 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
